@@ -1,0 +1,14 @@
+{
+  "bruteforce_threshold": 5,
+  "bruteforce_window_min": 10,
+  "distributed_min_ips": 5,
+  "distributed_min_failures": 20,
+  "spray_distinct_users": 5,
+  "scan_404_threshold": 20,
+  "scan_window_min": 5,
+  "web_login_threshold": 10,
+  "web_login_window_min": 5,
+  "business_hours": [7, 20],
+  "new_ip_min_history": 3,
+  "whitelist_ips": ["127.0.0.1", "::1"]
+}

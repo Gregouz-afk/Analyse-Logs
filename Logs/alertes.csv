@@ -1,0 +1,33 @@
+﻿severite;categorie;description;source;ip;compte;debut;fin;nb
+critique;Brute-force réussi;Connexion RÉUSSIE de « Administrateur » depuis 80.94.95.12 après 45 échecs;windows;80.94.95.12;Administrateur;2026-11-11 03:01:25.824267;2026-11-11 03:01:35.856294;46
+critique;Activité Windows;Journal de sécurité effacé par Administrateur sur SRV-FILES01.corp.local;windows;;Administrateur;2026-11-11 03:35:00;2026-11-11 03:35:00;1
+critique;Fichier sensible exposé;/.env renvoyé avec succès (200) à 91.240.118.50;apache;91.240.118.50;;2026-11-11 05:30:00;2026-11-11 05:30:00;1
+critique;Fichier sensible exposé;/.git/config renvoyé avec succès (200) à 91.240.118.50;apache;91.240.118.50;;2026-11-11 05:30:01;2026-11-11 05:30:01;1
+critique;Fichier sensible exposé;/download?file=../../../../etc/passwd renvoyé avec succès (200) à 198.51.100.77;apache;198.51.100.77;;2026-11-11 11:00:46;2026-11-11 11:00:46;1
+critique;Brute-force réussi;Connexion RÉUSSIE de « deploy » depuis 185.220.101.7 après 35 échecs;auth;185.220.101.7;deploy;2026-11-11 13:31:53;2026-11-11 13:32:11;36
+haute;Scan web;Énumération : 106 réponses 404 pour 192.0.2.10 (106 chemins distincts, pic 106 en 5 min);apache;192.0.2.10;;2026-11-11 01:00:00;2026-11-11 01:01:11;106
+haute;Scan web;Outil de scan détecté (nikto) depuis 192.0.2.10 — 120 requêtes;apache;192.0.2.10;;2026-11-11 01:00:00;2026-11-11 01:01:11;120
+haute;Brute-force;80 échecs de connexion depuis 203.0.113.45 (pic : 80 en 10 min) — comptes visés : root (80);auth;203.0.113.45;root;2026-11-11 02:10:00;2026-11-11 02:13:24;80
+haute;Brute-force;45 échecs de connexion depuis 80.94.95.12 (pic : 45 en 10 min) — comptes visés : Administrateur (45);windows;80.94.95.12;Administrateur;2026-11-11 03:00:00;2026-11-11 03:01:31.856294;45
+haute;Connexion anormale;Session RDP de « Administrateur » depuis l'IP publique 80.94.95.12;windows;80.94.95.12;Administrateur;2026-11-11 03:01:35.856294;2026-11-11 03:01:35.856294;1
+haute;Activité Windows;svc_maint ajouté au groupe Administrateurs par Administrateur;windows;;svc_maint;2026-11-11 03:21:00;2026-11-11 03:21:00;1
+haute;Brute-force distribué;Compte « admin » attaqué depuis 9 IP différentes (33 échecs);auth;;admin;2026-11-11 04:00:01;2026-11-11 20:32:53;33
+haute;Password spraying;198.51.100.23 a essayé 11 comptes différents : admin, test, oracle, postgres, ubuntu, guest, ftp, user…;auth;198.51.100.23;;2026-11-11 04:00:01;2026-11-11 04:01:54;11
+haute;Attaque web;Log4Shell (JNDI) : 1 requête(s) depuis 45.95.147.236 dont 1 avec réponse 2xx/3xx;apache;45.95.147.236;;2026-11-11 07:42:00;2026-11-11 07:42:00;1
+haute;Scan web;Énumération : 200 réponses 404 pour 203.0.113.99 (200 chemins distincts, pic 200 en 5 min);apache;203.0.113.99;;2026-11-11 09:15:00;2026-11-11 09:16:08;200
+haute;Attaque web;Injection SQL : 9 requête(s) depuis 198.51.100.77 dont 2 avec réponse 2xx/3xx;apache;198.51.100.77;;2026-11-11 11:00:00;2026-11-11 11:02:28;9
+haute;Attaque web;XSS : 6 requête(s) depuis 198.51.100.77 dont 2 avec réponse 2xx/3xx;apache;198.51.100.77;;2026-11-11 11:00:25;2026-11-11 11:02:49;6
+haute;Attaque web;Traversée de répertoires : 3 requête(s) depuis 198.51.100.77 dont 2 avec réponse 2xx/3xx;apache;198.51.100.77;;2026-11-11 11:00:46;2026-11-11 11:02:53;3
+haute;Attaque web;Injection de commande : 3 requête(s) depuis 198.51.100.77 dont 1 avec réponse 2xx/3xx;apache;198.51.100.77;;2026-11-11 11:00:57;2026-11-11 11:03:01;3
+haute;Brute-force;35 échecs de connexion depuis 185.220.101.7 (pic : 35 en 10 min) — comptes visés : deploy (35);auth;185.220.101.7;deploy;2026-11-11 13:30:00;2026-11-11 13:32:08;35
+haute;Brute-force web;50 tentatives de login web depuis 45.155.205.3 sur /wp-login.php (50);apache;45.155.205.3;;2026-11-11 15:00:00;2026-11-11 15:02:52;50
+haute;Password spraying;10.0.0.66 a essayé 10 comptes différents : jdupont, mmartin, sleroy, pdurand, lbernard, cpetit, nrobert, arichard…;windows;10.0.0.66;;2026-11-11 16:10:00;2026-11-11 16:10:44.431960;10
+haute;Connexion anormale;Nouvelle IP pour « alice » : 45.83.12.9 (jamais vue sur 10 connexions);auth;45.83.12.9;alice;2026-11-11 22:47:12;2026-11-11 22:47:12;1
+moyenne;Scan web;Recherche de fichiers sensibles depuis 192.0.2.10 (8 chemins, ex. /phpmyadmin/, /.git/config, /.env, /backup.sql);apache;192.0.2.10;;2026-11-11 01:00:00;2026-11-11 01:01:11;66
+moyenne;Connexion anormale;Connexion hors horaires (7h-20h) de « Administrateur » depuis 80.94.95.12 : 11/11 03:01;windows;80.94.95.12;Administrateur;2026-11-11 03:01:35.856294;2026-11-11 03:01:35.856294;1
+moyenne;Activité Windows;Compte créé : svc_maint (créé par Administrateur);windows;;svc_maint;2026-11-11 03:20:00;2026-11-11 03:20:00;1
+moyenne;Scan web;Recherche de fichiers sensibles depuis 91.240.118.50 (4 chemins, ex. /.env, /.git/config, /wp-config.php.bak, /phpmyadmin/);apache;91.240.118.50;;2026-11-11 05:30:00;2026-11-11 05:30:05;4
+moyenne;Scan web;Recherche de fichiers sensibles depuis 203.0.113.99 (10 chemins, ex. /backup/, /backup1/, /backup2/, /backup3/);apache;203.0.113.99;;2026-11-11 09:15:00;2026-11-11 09:16:02;10
+moyenne;Brute-force;6 échecs de connexion depuis 10.0.0.22 (pic : 6 en 10 min) — comptes visés : mmartin (6);windows;10.0.0.22;mmartin;2026-11-11 09:30:00;2026-11-11 09:31:09.663017;6
+moyenne;Activité Windows;Compte verrouillé : mmartin (SRV-FILES01.corp.local);windows;;mmartin;2026-11-11 09:31:11.663017;2026-11-11 09:31:11.663017;1
+moyenne;Connexion anormale;Connexion hors horaires (7h-20h) de « alice » depuis 45.83.12.9 : 11/11 22:47;auth;45.83.12.9;alice;2026-11-11 22:47:12;2026-11-11 22:47:12;1

